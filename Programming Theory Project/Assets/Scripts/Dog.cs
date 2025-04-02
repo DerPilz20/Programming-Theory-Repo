@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Dog : Animal
+public class Dog : Animal // INHERITANCE
 {
    
     void Awake()
@@ -9,7 +9,7 @@ public class Dog : Animal
         rb = GetComponent<Rigidbody>();
     }
 
-    public override void Talk()
+    public override void Talk() // POLYMORPHISM
     {
         base.Talk();
         Debug.Log("WAU");

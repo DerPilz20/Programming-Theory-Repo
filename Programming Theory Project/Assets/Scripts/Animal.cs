@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class Animal : MonoBehaviour
 {
-    private float speed = 4.0f;
-    protected float jumpHeight;
-    protected Rigidbody rb;
+    private float speed = 4.0f; // ENCAPSULATION
+    protected float jumpHeight; // ENCAPSULATION
+    protected Rigidbody rb; // ENCAPSULATION
 
-    public void Walk()
+    public void Walk() // ABSTRACTION
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 
-    public void Jump()
+    public void Jump() // ABSTRACTION
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -19,7 +19,7 @@ public class Animal : MonoBehaviour
         }
     }
 
-    public virtual void Talk()
+    public virtual void Talk() // POLYMORPHISM // ABSTRACTION
     {
         Debug.Log("Animal is making a sound");
     }
